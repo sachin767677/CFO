@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #c2f0c2, #c1d6ff);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1.main-title {
+    font-size: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: green;
+    margin: 20px 0;
+    line-height: 20%;
+}
+
+h2.subtitle {
+    font-size: 24px;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 40px;
+}
+
+.card {
+    background: linear-gradient(135deg, #ff99cc, #66ccff);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    font-size: 22px;
+    color: #333;
+}
+
+.card p {
+    font-size: 16px;
+    color: #555;
+    font-family:italic;
+}
+
+.btn-green, .btn-blue {
+    background: linear-gradient(135deg, #59d369, #191a1b);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.btn-green {
+    background-color: #28a745;
+}
+
+.btn-blue {
+    background-color: #007bff;
+}
+
+.tax button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+    height: 40px;
+    border: none;
+    width: 100px;
+    background: linear-gradient(135deg, #ff99cc, #c5f455);
+}

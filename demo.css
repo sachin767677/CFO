@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(to right, #c6f5d8, #b8defb);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .brand {
+    font-size: 16px;
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+  
+  h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: green;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .boxes {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 120px;
+  }
+  
+  .box {
+    background: linear-gradient(135deg, #ff9ee0, #ffeea5);
+    width: 220px;
+    padding: 20px;
+    border-radius: 50px 0 50px 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .box h3 {
+    font-style: italic;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .box p {
+    font-style: italic;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    border: none;
+    background: linear-gradient(to right, #00dbde, #00c1a8);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .learn-btn {
+    background: linear-gradient(to right, #ff6ec4, #ffc400);
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
+  }

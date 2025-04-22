@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Upload Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .card-3d {
+        transform-style: preserve-3d;
+        transform: rotateX(8deg) rotateY(8deg);
+        transition: transform 0.5s ease, box-shadow 0.5s ease;
+      }
+
+      .card-3d:hover {
+        transform: rotateX(0deg) rotateY(0deg) scale(1.03);
+        box-shadow: 0 25px 50px rgba(160, 74, 74, 0.5);
+      }
+
+      .glow-border {
+        box-shadow: 0 0 15px rgba(18, 28, 44, 0.7), 0 0 25px rgba(21, 174, 52, 0.6);
+      }
+    </style>
+
+    <script>
+     async function handleForm2(event) {
+    event.preventDefault();
+    const formData = new FormData();
+    formData.append('name', document.getElementById('name2').value);
+    formData.append('file', document.getElementById('fileInput').files[0]);
+
+    const res = await fetch('http://localhost:5500/submit-file', {
+      method: 'POST',
+      body: formData
+    });
+
+    const data = await res.json();
+    alert(data.message);
+  }
+    </script>
+  </head>
+
+  <body class="flex items-center justify-center min-h-screen bg-gradient-to-r from-black via-blue-900 to-purple-900">
+    <div class="w-full max-w-md p-6 card-3d rounded-2xl bg-white bg-opacity-10 backdrop-blur-md glow-border">
+      <h2 class="text-white text-2xl font-bold mb-6 text-center drop-shadow-lg">Upload Form</h2>
+      <form class="space-y-4" onsubmit="handleForm2(event)" enctype="multipart/form-data">
+        <input
+        name="name" id="name2" type="text"
+          placeholder="Full Name"
+          class="w-full px-4 py-3 rounded-xl bg-white bg-opacity-20 text-white placeholder-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-500"
+        />
+        <input
+        name="file" id="fileInput" type="file"
+          class="w-full px-4 py-3 rounded-xl bg-white bg-opacity-20 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+        />
+        <button
+        type="submit"
+          class="w-full py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full shadow-md hover:scale-105 transition-all duration-300"
+        >
+          Upload Your ITR
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
